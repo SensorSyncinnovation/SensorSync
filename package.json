@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://www.sensorsyncinnovation.com",
+  "homepage": "https://sensorsyncinnovation.github.io/SensorSync/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -36,6 +36,6 @@
     "globals": "^15.14.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "vite": "^6.0.5"
+    "vite": "^6.0.11"
   }
 }
