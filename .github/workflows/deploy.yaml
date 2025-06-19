@@ -13,24 +13,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 🧱 Set up Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: 📦 Install dependencies (ignore peer conflicts)
+      - name: Install dependencies (ignore peer conflicts)
         run: npm install --legacy-peer-deps
 
-      - name: 🏗️ Build the Vite project
+      - name: Build the Vite project
         run: npm run build
 
-      - name: 🚀 Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          cname: www.sensorsyncinnovation.com
+          cname: www.sensorsyncinnovation.com # added Custom Domain so that it don't access github domain
